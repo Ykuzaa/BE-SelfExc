@@ -10,6 +10,7 @@ Sections marked *Complément* in the notebook (and *complement* in the report) a
 
 - `BE_SelfExc.ipynb` — notebook with all simulations, figures and results
 - `rapport.pdf` — project report
+- `presentation.pdf` — short presentation (Beamer) for the manager
 
 ## Running the notebook
 

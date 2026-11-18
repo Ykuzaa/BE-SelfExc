@@ -28,13 +28,15 @@ The project splits along the questions of the BE. Each part has some theory, som
 | | Person A — the model | Person B — what changes compared with Poisson | Person C — ruin and premium |
 |---|---|---|---|
 | Notebook sections | 1, 2, 3, 7, 6.5 | 4, 5, effect of $\alpha$ on ruin (end of 6.2), 6.3 | 6.1, 6.2, 6.4, 6.6, 6.7 |
-| Theory | Poisson reminders, construction by thinning, $\mathbb{E}[N_t]$ with the Mecke formula, exact $\mathrm{Var}(N_T)$, link with Hawkes, weight of the second chaos and its sensitivity | Role of $\mu$, $\alpha$, $\beta$, conditions on the parameters, claim size distributions, effect of clusters alone (equivalent Poisson) | Ruin checked after jumps, Lundberg, $\mathrm{Var}(S_t)$, premium principles, long horizon |
+| Theory | Poisson reminders, construction by thinning, $\mathbb{E}[N_t]$ with the Mecke formula, exact $\mathrm{Var}(N_T)$, link with Hawkes, weight of the second chaos and its sensitivity | Role of $\mu$, $\alpha$, $\beta$, conditions on the parameters, claim size distributions, effect of the structure of arrivals (equivalent Poisson) | Ruin checked after jumps, Lundberg, $\mathrm{Var}(S_t)$, premium principles, long horizon |
 | Code | Algorithm 1, `sauts_N`, `simule_impact`, `esperance_impact`, `variance_impact`, Monte Carlo check, Ogata for Hawkes, sensitivity to `facteur` | Table of configurations, sample paths, the five claim size distributions, ruin as a function of $\alpha$, equal-mean comparison | Ruin computation (`marge_min`, `psi`), validation on the course case, comparison of the models, variance premium, long horizon |
 | For the manager | How the model works, table of course properties | What each parameter does and what the model brings compared with Poisson | How much to charge and what risk is taken |
 | Depends on | — | A, then C (`psi`) | A |
+| Slides at the oral | 2 to 5 | 6, 7, 10 | 8, 9, 11 |
 
 How to organise:
 
 1. Together at the start: fix the parameters ($\mu$, $\alpha$, $\beta$, $T$, $\eta$, `facteur`) and the function names.
 2. Person A delivers the simulation functions first. Person C then delivers the ruin function `psi`. Meanwhile, C can test the ruin code with the Poisson model and B can work on sections 4 and 5, which do not need it.
 3. Together at the end: the summary for the manager, the conclusion and the report layout. Everyone reads the other parts to be able to answer any question at the oral.
+4. At the oral, slides 1 and 12 (title and takeaways) are presented together.

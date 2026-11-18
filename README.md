@@ -16,7 +16,7 @@ pip install numpy matplotlib jupyter
 jupyter notebook BE_SelfExc.ipynb
 ```
 
-The random generator is seeded, so all results of the report can be reproduced (about 15 seconds).
+The random generator is seeded, so all results of the report can be reproduced (about 30 seconds).
 
 ## Splitting the work between three people
 
@@ -24,9 +24,9 @@ The project splits along the questions of the BE. Each part has some theory, som
 
 | | Person A — the model | Person B — what changes compared with Poisson | Person C — ruin and premium |
 |---|---|---|---|
-| Notebook sections | 1, 2, 3, 7 | 4, 5, effect of $\alpha$ on ruin, 6.2 | 6.1, 6.3, 6.4, 6.5 |
-| Theory | Poisson reminders, construction by thinning, $\mathbb{E}[N_t]$ with the Mecke formula, link with Hawkes, weight of the second chaos | Role of $\mu$, $\alpha$, $\beta$, conditions on the parameters, claim size distributions, effect of clusters alone (equivalent Poisson) | Ruin checked after jumps, Lundberg, $\mathrm{Var}(S_t)$, premium principles, long horizon |
-| Code | Algorithm 1, `sauts_N`, `simule_impact`, `esperance_impact`, Monte Carlo check, Ogata for Hawkes | Table of configurations, sample paths, the five claim size distributions, ruin as a function of $\alpha$, equal-mean comparison | Vectorised ruin computation (`simule_trajectoires`, `psi`), validation on the course case, comparison of the models, variance premium, long horizon |
+| Notebook sections | 1, 2, 3, 7, 6.5 | 4, 5, effect of $\alpha$ on ruin (end of 6.2), 6.3 | 6.1, 6.2, 6.4, 6.6, 6.7 |
+| Theory | Poisson reminders, construction by thinning, $\mathbb{E}[N_t]$ with the Mecke formula, exact $\mathrm{Var}(N_T)$, link with Hawkes, weight of the second chaos and its sensitivity | Role of $\mu$, $\alpha$, $\beta$, conditions on the parameters, claim size distributions, effect of clusters alone (equivalent Poisson) | Ruin checked after jumps, Lundberg, $\mathrm{Var}(S_t)$, premium principles, long horizon |
+| Code | Algorithm 1, `sauts_N`, `simule_impact`, `esperance_impact`, `variance_impact`, Monte Carlo check, Ogata for Hawkes, sensitivity to `facteur` | Table of configurations, sample paths, the five claim size distributions, ruin as a function of $\alpha$, equal-mean comparison | Ruin computation (`marge_min`, `psi`), validation on the course case, comparison of the models, variance premium, long horizon |
 | For the manager | How the model works, table of course properties | What each parameter does and what the model brings compared with Poisson | How much to charge and what risk is taken |
 | Depends on | — | A, then C (`psi`) | A |
 

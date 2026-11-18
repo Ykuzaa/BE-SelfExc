@@ -4,6 +4,8 @@ BE *Poisson Processes and Applications in Actuarial Science and Reliability* —
 
 Study of a Cramér–Lundberg model where the Poisson claim process is replaced by a self-exciting impact model built from a Poisson random measure (thinning). We compute the expected number of claims at any date, study the role of the parameters, and analyse the ruin probability with discrete and continuous claim size distributions.
 
+Sections marked *Complément* in the notebook (and *complement* in the report) are not required by the subject: we added them only to check our results (exact variance, comparison with Hawkes, equal-mean Poisson, variance premium, sensitivity to the weight 2, long horizon).
+
 ## Files
 
 - `BE_SelfExc.ipynb` — notebook with all simulations, figures and results
